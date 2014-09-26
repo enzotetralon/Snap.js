@@ -216,8 +216,10 @@
                        }
                 },
                 x: function(n) {
-                    if( (settings.disable==='left' && n>0) ||
-                        (settings.disable==='right' && n<0)
+                    // 
+                    if( (settings.disable==='left' && n>0) || 
+                    (settings.disable==='right' && n<0) || 
+                    (settings.disable==='both' && (n<0 || n>0) ) 
                     ){ return; }
                     
                     if( !settings.hyperextensible ){
